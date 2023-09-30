@@ -1,0 +1,9 @@
+<div class="router-container flex-column justify-content-start pt-5">
+  <div class="input-group mb-3 w-25">
+    <input [(ngModel)]="newItem" type="text" class="form-control" placeholder="Write smth" aria-describedby="add-button">
+    <button (click)="addItem()" class="btn btn-outline-success" type="button" id="add-button">Add</button>
+  </div>
+  <div class="list-group w-25 list-group-flush">
+    <div *ngFor="let item of items; let idx = index" class="list-group-item d-flex justify-content-between small">{{item}} <button (click)="removeItem(idx)" class="btn btn-danger">Remove</button></div>
+  </div>
+</div>

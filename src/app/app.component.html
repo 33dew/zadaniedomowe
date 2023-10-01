@@ -1,6 +1,7 @@
 <div class="main-container">
   <nav>
-    <a *ngFor="let page of pages" [routerLink]="page.path">{{page.title}}</a>
+    <a *ngFor="let page of pages" [routerLink]="page.path">{{page.title | translate}}</a>
+    <a (click)="switchLanguage()" class="switch-lang">{{'SWITCH' | translate}}</a>
   </nav>
 
   <div class="router-outlet">

@@ -1,0 +1,15 @@
+{
+  "COUNTER": "Licznik",
+  "TODO": "Lista zadań",
+  "FORM": "Formularz",
+  "WRITE-SMTH": "Napisz coś",
+  "ADD": "Dodaj",
+  "REMOVE": "Usuń",
+  "NAME": "Imię",
+  "SURNAME": "Nazwisko",
+  "HISTORY": "Historia",
+  "INCREASE": "Dodaj wartość",
+  "DECREASE": "Odejmij wartość",
+  "RESET": "Resetuj",
+  "SWITCH": "Przełącz język"
+}

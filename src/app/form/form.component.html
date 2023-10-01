@@ -1,11 +1,11 @@
 <div class="router-container flex-column justify-content-start pt-5">
   <div class="input-group w-25">
-    <input [(ngModel)]="name" type="text" placeholder="Name" class="form-control">
-    <input [(ngModel)]="surname" type="text" placeholder="Surname" class="form-control">
-    <button (click)="addUser()" class="btn btn-outline-success" type="button">Add</button>
+    <input [(ngModel)]="name" type="text" placeholder="{{ 'NAME' | translate }}" class="form-control">
+    <input [(ngModel)]="surname" type="text" placeholder="{{ 'SURNAME' | translate }}" class="form-control">
+    <button (click)="addUser()" class="btn btn-outline-success" type="button">{{ 'ADD' | translate }}</button>
   </div>
   <div class="list-group w-25 pt-5 d-flex flex-column align-items-center">
-    <p>History:</p>
+    <p>{{ 'HISTORY' | translate }}:</p>
     <div *ngFor="let user of users" class="list-group-item small w-100">{{user.name}} {{user.surname}}</div>
   </div>
 </div>

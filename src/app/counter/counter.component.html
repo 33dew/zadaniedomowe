@@ -1,8 +1,8 @@
 <div class="router-container flex-column">
   <h1>{{currentValue}}</h1>
   <div class="d-flex gap-2">
-    <button (click)="increaseValue()" class="btn btn-outline-success">Increase value</button>
-    <button (click)="decreaseValue()" class="btn btn-outline-danger">Decrease value</button>
-    <button (click)="resetValue()" class="btn btn-outline-primary">Reset value</button>
+    <button (click)="increaseValue()" class="btn btn-outline-success">{{ 'INCREASE' | translate }}</button>
+    <button (click)="decreaseValue()" class="btn btn-outline-danger">{{ 'DECREASE' | translate }}</button>
+    <button (click)="resetValue()" class="btn btn-outline-primary">{{ 'RESET' | translate }}</button>
   </div>
 </div>

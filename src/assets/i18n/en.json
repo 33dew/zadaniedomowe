@@ -1,0 +1,15 @@
+{
+  "COUNTER": "Counter",
+  "TODO": "Todo",
+  "FORM": "Form",
+  "WRITE-SMTH": "Write something",
+  "ADD": "Add",
+  "REMOVE": "Remove",
+  "NAME": "Name",
+  "SURNAME": "Surname",
+  "HISTORY": "History",
+  "INCREASE": "Increase value",
+  "DECREASE": "Decrease value",
+  "RESET": "Reset value",
+  "SWITCH": "Switch language"
+}

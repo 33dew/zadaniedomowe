@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 type Page = {
   title: string;
@@ -10,12 +11,31 @@ type Page = {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'zadaniedom';
+export class AppComponent implements OnInit{
+  pages: Page[] = [];
 
-  pages: Page[] = [
-    { title: 'Counter', path: '/counter' },
-    { title: 'Todo', path: '/todo' },
-    { title: 'Form', path: '/form' }
-  ]
+  constructor(private _translateService: TranslateService) { }
+
+  ngOnInit(): void {
+    this._translateService.use(localStorage.getItem('lang') || 'pl');
+    this.pages = [
+      {
+        title: 'COUNTER',
+        path: '/counter'
+      },
+      {
+        title: 'TODO',
+        path: '/todo'
+      },
+      {
+        title: 'FORM',
+        path: '/form'
+      }
+    ]
+  }
+
+  switchLanguage() {
+    localStorage.setItem('lang', this._translateService.currentLang === 'en' ? 'pl' : 'en');
+    this._translateService.use(localStorage.getItem('lang') || 'pl');
+  }
 }
